@@ -1,0 +1,31 @@
+# Python / Backend
+venv/
+__pycache__/
+*.pyc
+.env
+celerybeat-schedule
+
+# Flutter / Frontend
+smart_task_app/build/
+smart_task_app/.dart_tool/
+smart_task_app/.flutter-plugin-dependencies
+smart_task_app/android/.gradle/
+
+# General
+.vscode/
+.DS_Store
+
+# Local environments, data and generated reports
+.venv/
+.env.*
+!.env.example
+*.db
+*.sqlite3
+*.log
+.pytest_cache/
+
+# Development notes and the original private-repository deployment workflow
+/AGENTS.md
+/smart-task-manager/requirements-status.md
+/smart-task-manager/python
+/.github/workflows/deploy-web.yml

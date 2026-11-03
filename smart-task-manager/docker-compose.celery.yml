@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  celery_worker:
+    build:
+      context: .
+    image: smart-task-manager:latest
+    working_dir: /app
+    volumes:
+      - ./:/app:cached
+    command: celery -A celery_app worker -B -l info
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - redis
+      - db
+    restart: unless-stopped
+
+networks:
+  default:
+    name: smart-task-manager_default
