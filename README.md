@@ -1,5 +1,8 @@
 # Smart Task Manager
 
+[![Backend checks](https://github.com/Nuttha-lim/smart-task-manager/actions/workflows/python-app.yml/badge.svg)](https://github.com/Nuttha-lim/smart-task-manager/actions/workflows/python-app.yml)
+[![Flutter checks](https://github.com/Nuttha-lim/smart-task-manager/actions/workflows/flutter.yml/badge.svg)](https://github.com/Nuttha-lim/smart-task-manager/actions/workflows/flutter.yml)
+
 A Flutter and FastAPI application for organizing tasks around available time and daily energy levels. It combines task tracking, calendar planning and AI-assisted task entry, with PostgreSQL for storage.
 
 [Web deployment](https://github.com/whyohkay/stm-web) · [Portfolio](https://github.com/Nuttha-lim/portfolio)
@@ -7,6 +10,18 @@ A Flutter and FastAPI application for organizing tasks around available time and
 ## My contribution
 
 I built the application with AI assistance, working with Flutter/Dart, FastAPI, PostgreSQL and Docker. The project helped me understand how the interface connects to an API and how the backend stores and retrieves data.
+
+## Validation at a glance
+
+| Recorded check | Result |
+| --- | --- |
+| Backend tests with SQLite and mocked AI responses | 268 passed |
+| Flutter tests | 7 passed |
+| Release web build | Passed |
+
+These results are from the documented Windows run on 3 November 2026. Live AI responses, PostgreSQL integration and push delivery need separate integration checks. See [the environment and scope](docs/TEST_RESULTS.md).
+
+[Backend test cases](smart-task-manager/tests) · [Flutter test cases](smart_task_app/test) · [Database migrations](smart-task-manager/alembic/versions)
 
 ## Features
 
